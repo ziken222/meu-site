@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nosso Amor</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio" class="tablink" onclick="openTab(event, 'inicio')">Início</a></li>
+                <li><a href="#sobre" class="tablink" onclick="openTab(event, 'sobre')">Sobre Nós</a></li>
+                <li><a href="#historia" class="tablink" onclick="openTab(event, 'historia')">Nossa História</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Aba Início -->
+        <section id="inicio" class="tabcontent">
+            <h2>Bem-vindo ao Nosso Amor</h2>
+            <p>nesse site q eu fiz pensando em vc queria mostra e contar um pouco dos nosso momentos bons pra vc.</p>
+        </section>
+
+        <!-- Aba Sobre Nós -->
+        <section id="sobre" class="tabcontent" style="display:none;">
+            <h2>Sobre Nós</h2>
+            <p>ficamos juntos durante dois anos e eu errei muito nesses dois anos por ser muito imaturo, mas hj eu quero fazer diferente e eu to aqui tentando reconquista o amor da minha vida                .</p>
+        </section>
+
+        <!-- Aba Nossa História -->
+        <section id="historia" class="tabcontent" style="display:none;">
+            <h2>Nossa História</h2>
+            <p>tudo começo quando eu estava no oitavo ano da escola e ela no nono, e quando eu vi ela pela primeira vez ela tava com aquela cara de marenta dela com raiva provavelmente por alguma coisa engraçada e quando eu conversei com ela senti q era pra ser ela, entao tinha me decidido a fica com ela, e assim começo nossa historia de amor, obvio teve muitas brigas e etc como todo relacionamento mas teve muitos momentos incriveis e isso q eu quero contar pra vc, eu nunca vou esquecer do nosso primeiro encontro q foi no cinema q eu nao conseguia para de beija vc e de como eu te olhava e pemsava o quao linda vc era, amei quando a gente foi no banho com minha familia, e todas as vezes q me escrevia uma carta pensava mds esse sentimento e tao bom e tao incrivel, lembro da primeira vez q dormi na sua casa nao podia dormi do seu lado mas acordei de manha pra ir pra sua cama e dormi mesmo q so por alguns minutos ao seu lado pra sentir seu carinho seu amor            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nosso Amor. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
